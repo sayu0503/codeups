@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.mySwiper,
+.swiper-slide picture,
+.swiper-slide img {
+    height: inherit;
+}
+
+.swiper-slide {
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: "";
+    position: absolute;
+    transform: translate(-50%);
+    @include mq(md){
+        width: rem(80);
+        height: rem(80);
+    }
+}
+
+.js-campaign-swiper {
+  padding-bottom: rem(10);
+}
+
+.swiper-button-next {
+  right: 25px;
+}
+
+.swiper-button-next::after {
+    background: transparent url(../images/common/next.png) no-repeat center / contain;
+}
+
+.swiper-button-prev {
+  left: 25px;
+}
+
+.swiper-button-prev::after {
+    background: transparent url(../images/common/prev.png) no-repeat center / contain;
+}
+
+.swiper-button-prev {
+  left: 75.5%;
+  top:  -14%;
+  bottom: 0;
+}
+
+.swiper-button-next {
+  left: 86.6%;
+    top: -14%;
+  bottom: 0;
+}

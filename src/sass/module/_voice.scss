@@ -1,0 +1,57 @@
+@use "global" as *;
+
+
+.voice {
+    @include mq(md){
+        position: relative;
+    }
+}
+
+.voice__inner {
+    max-width: rem(1130);
+    padding-left: rem(15);
+    padding-right: rem(15);
+    margin-inline: auto;
+    @include mq(md){
+       padding: $padding-pc;
+    }
+}
+
+.voice__img-fish {
+    @include mq(md){
+        position: absolute;
+        top: rem(-120);
+        left: calc(50% - min(50vw,621px));
+        width: rem(301);
+        height: auto;
+    }
+}
+
+.voice__img-tatunootoshigo {
+    @include mq(md){
+        position: absolute;
+        bottom: rem(-71);
+        right: calc(50% - min(50vw,540px));
+        width: rem(71);
+        height: auto;
+    }
+}
+
+.voice__contents {
+    display: grid;
+    gap: rem(41);
+    margin-top: rem(44);
+    grid-template-columns: repeat(1, 1fr);
+    @include mq(md){
+        margin-top: rem(30);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.voice__btn {
+    padding-top: rem(41);
+    @include mq(md){
+        padding-top: rem(81);
+    }
+}
+
