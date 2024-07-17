@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.header.is-dark {
+    background-color: #9A9A9A;
+}
+
 .header {
     height: rem(80);
     background-color: rgba($green, $alpha: 0.68);
@@ -7,13 +11,12 @@
     position: fixed;
     width: 100%;
     transition: 0.3s;
+    top: 0;
+    left: 0;
+    right: 0;
     @include mq(md){
         height: rem(90);
     }
-}
-
-.header.is-dark {
-    background-color: #9A9A9A;
 }
 
 .header__inner {
@@ -35,9 +38,9 @@
 }
 
 .header__pc-nav {
-    height: inherit;
     display: none;
     @include mq(md){
+        height: inherit;
         display: block;
     }
 }
@@ -50,12 +53,10 @@
 }
 
 .header__logo-link {
+    height: inherit;
     display: block;
     position: relative;
     z-index: 9999;
-}
-
-.header__logo-link img{
     width: rem(107);
     @include mq(md){
         width: rem(140);

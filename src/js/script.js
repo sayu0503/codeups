@@ -47,7 +47,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     breakpoints: {
       // 768px以上の場合
       768: {
-      slidesPerView: 3.5,
+       slidesPerView: 3.5,
        spaceBetween: 40,
        centeredSlides: false,
        width: 1265.5,

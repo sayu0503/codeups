@@ -1,45 +1,62 @@
 @use "global" as *;
+.pc-nav {
 
-.pc-nav__items {
+}
+ .pc-nav__items {
+    height: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: inherit;
-}
+ }
 
 .pc-nav__item {
-    padding: 0 rem(20);
-}
-
-.pc-nav__item,
-.pc-nav__item a{
     height: inherit;
-}
-
-.pc-nav__item a{
-    align-items: center;
-    color: $white;
-    line-height: 1;
-    padding-left: rem(13);
-    padding-right: rem(12);
     text-align: center;
-}
+    display: flex;
+    align-items: center;
+ }
 
-.pc-nav__title {
+.pc-nav__link {
+    height: inherit;
     font-family: $third-font-family;
     font-weight: $regular;
     font-size: rem(18);
-    margin-top: rem(2);
+    color: $white;
+    padding-left: rem(13);
+    padding-right: rem(12);
+    padding-top: rem(25);
+    line-height: calc(18/18);
+    position: relative;
 }
 
-.pc-nav__subtitle {
-    font-family: $base-font-family;
-    font-weight: $regular;
-    font-size: rem(10);
-    line-height: calc(15/10);
-    margin-top: rem(4);
-    padding-bottom: rem(4);
+.pc-nav__link:hover {
+    color: $white;
 }
+
+.pc-nav__link::after {
+    content: "";
+    position: absolute;
+    bottom: rem(20);
+    left: 10%;
+    width: 80%;
+    height: rem(1);
+    background: $white;
+    transition: all .3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+}
+
+.pc-nav__link:hover::after{
+    transform: scale(1, 1);
+}
+
+ .pc-nav__subtitle {
+       font-family: $base-font-family;
+       font-weight: $regular;
+       font-size: rem(10);
+       line-height: calc(15/10);
+       margin-top: rem(4);
+ }
 
 
 
