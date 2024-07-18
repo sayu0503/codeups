@@ -4,10 +4,16 @@
 .swiper-slide picture,
 .swiper-slide img {
     height: inherit;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .swiper-slide {
     object-fit: cover;
+}
+
+.swiper-slide.slide-2{
+  height: auto;
 }
 
 .swiper-button-next,
@@ -20,10 +26,16 @@
     content: "";
     position: absolute;
     transform: translate(-50%);
+    transition: all 0.3s ease 0s;
     @include mq(md){
         width: rem(80);
         height: rem(80);
     }
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  opacity: 0.5;
 }
 
 .js-campaign-swiper {

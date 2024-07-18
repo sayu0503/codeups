@@ -84,6 +84,7 @@
 .access__map {
     aspect-ratio: 295 / 160;
     margin-top: rem(16);
+    transition: all 0.3s ease 0s;
     @include mq(md){
         aspect-ratio: 273 / 145;
         margin-top: 0;
@@ -91,6 +92,9 @@
     }
 }
 
+.access__map:hover {
+    opacity: 0.6;
+}
 .access__map iframe {
     width: 100%;
     height: 100%;

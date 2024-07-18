@@ -11,11 +11,16 @@
     background-color: transparent;
     border: rem(1) solid $green-accent;
     border-radius: rem(90);
+    transition: all 0.3s ease 0s;
     @include mq(md){
         width: rem(80);
         height: rem(80);
         right: rem(20);
     }
+}
+
+.page-top-button:hover {
+  opacity: 0.5;
 }
 
   .page-top-button::after {
