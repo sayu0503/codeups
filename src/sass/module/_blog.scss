@@ -1,16 +1,24 @@
 @use "global" as *;
 
 .blog {
-    background-image: none;
-    @include mq(md){
-        background-image: url(../images/common/blog_img_bg.jpg);
-        background-repeat: no-repeat;
-        background-size: 100% 60.5%;
-        position: relative;
-    }
+    position: relative;
 }
 
-
+.blog::before {
+    @include mq(md){
+            content: "";
+            background-image: url(../images/common/blog_img_bg.jpg);
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+            width: 100%;
+            height: rem(500);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
 
 .blog__img {
     @include mq(md){
@@ -27,6 +35,7 @@
     display: grid;
     gap: rem(40);
     grid-template-columns: repeat(auto-fit, minmax(rem(333), 1fr));
+    place-items: center;
     @include mq(md){
         margin-top: rem(82);
     }
