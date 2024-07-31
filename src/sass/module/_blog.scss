@@ -22,13 +22,13 @@
 
 .inner.blog__inner {
     max-width: rem(600);
-    padding-left: rem(15);
-    padding-right: rem(15);
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
     margin-inline: auto;
     @include mq(md){
         max-width: rem(1130);
-        padding-left: rem(25);
-        padding-right: rem(25);
+        padding-left: $padding-pc;
+        padding-right: $padding-pc;
     }
 }
 
@@ -56,6 +56,6 @@
 .blog__btn {
     margin-top: rem(41);
     @include mq(md){
-        margin-top: rem(82);
+        margin-top: rem(80);
     }
 }

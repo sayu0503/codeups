@@ -41,7 +41,7 @@
 .voice-card__group {
     @include mq(md){
         display: flex;
-        margin-top: rem(15);
+        margin-top: rem(10);
         justify-content: space-between;
     }
 }
@@ -117,7 +117,7 @@
     font-size: rem(16);
     line-height: calc(24/16);
     color: $black;
-    margin-top: rem(15);
+    margin-top: rem(40);
     color: $green;
     display: flex;
     flex-direction: column;

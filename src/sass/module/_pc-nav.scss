@@ -1,7 +1,5 @@
 @use "global" as *;
-.pc-nav {
 
-}
  .pc-nav__items {
     height: inherit;
     display: flex;
@@ -22,8 +20,8 @@
     font-weight: $regular;
     font-size: rem(18);
     color: $white;
-    padding-left: rem(13);
-    padding-right: rem(12);
+    padding-left: rem(20);
+    padding-right: rem(20);
     padding-top: rem(25);
     padding-bottom: rem(25);
     line-height: calc(18/18);

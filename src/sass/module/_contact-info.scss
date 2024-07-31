@@ -10,7 +10,8 @@
     padding-right: rem(30);
     margin-inline: auto;
     @include mq(md){
-        padding: $padding-pc;
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
     }
 }
 
