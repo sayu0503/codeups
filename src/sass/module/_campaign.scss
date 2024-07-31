@@ -11,6 +11,15 @@
    }
 }
 
+.inner.campaign__inner {
+    padding-left: rem(15);
+    padding-right: rem(15);
+    @include mq(md){
+        padding-left: rem(25);
+        padding-right: rem(25);
+    }
+}
+
 .campaign__btn {
     margin-top: rem(31);
     @include mq(md){

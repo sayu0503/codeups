@@ -9,11 +9,12 @@
 }
 
 .information__inner {
-    max-width: rem(1130);
+    max-width: rem(600);
     padding-left: rem(15);
     padding-right: rem(15);
     margin-inline: auto;
     @include mq(md){
+        max-width: rem(1130);
         padding: $padding-pc;
     }
 }

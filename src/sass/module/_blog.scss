@@ -20,6 +20,18 @@
         }
     }
 
+.inner.blog__inner {
+    max-width: rem(600);
+    padding-left: rem(15);
+    padding-right: rem(15);
+    margin-inline: auto;
+    @include mq(md){
+        max-width: rem(1130);
+        padding-left: rem(25);
+        padding-right: rem(25);
+    }
+}
+
 .blog__img {
     @include mq(md){
         position: absolute;
