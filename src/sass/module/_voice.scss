@@ -51,9 +51,9 @@
 }
 
 .voice__btn {
-    padding-top: rem(41);
+    margin-top: rem(41);
     @include mq(md){
-        padding-top: rem(81);
+        margin-top: rem(81);
     }
 }
 

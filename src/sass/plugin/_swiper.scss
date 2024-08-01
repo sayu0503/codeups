@@ -42,16 +42,8 @@
   padding-bottom: rem(10);
 }
 
-.swiper-button-next {
-  right: 25px;
-}
-
 .swiper-button-next::after {
     background: transparent url(../images/common/next.png) no-repeat center / contain;
-}
-
-.swiper-button-prev {
-  left: 25px;
 }
 
 .swiper-button-prev::after {
@@ -59,13 +51,13 @@
 }
 
 .swiper-button-prev {
-  left: 75.5%;
+  left: 72%;
   top:  -14%;
   bottom: 0;
 }
 
 .swiper-button-next {
-  left: 86.6%;
+  left: 84.6%;
     top: -14%;
   bottom: 0;
 }

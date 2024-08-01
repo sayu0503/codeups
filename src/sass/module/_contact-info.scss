@@ -31,7 +31,7 @@
 .contact-info__contents {
     @include mq(md){
         display: flex;
-        padding: rem(79) 0 rem(74);
+        padding: rem(80) 0;
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
     }
 }
