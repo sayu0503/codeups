@@ -12,6 +12,22 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
+  //PC幅にしたときハンバーガーメニュードロワーを閉じる
+  $(window).resize(function () {
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      $(".js-hamburger").removeClass("is-active");
+      $(".js-sp-nav").fadeOut(300);
+    }
+});
+//ハンバーガーメニュー展開時背景をスクロールさせない方法
+$(".js-hamburger").click(function () {
+  if ($("body").css("overflow") === "hidden") {
+    $("body").css({ height: "", overflow: "" });
+  } else {
+    $("body").css({ height: "100%", overflow: "hidden" });
+  }
+});
+
   //メインビュースライド
     var swiper = new Swiper(".mySwiper", {
       loop: true,

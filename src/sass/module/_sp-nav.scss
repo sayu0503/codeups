@@ -10,6 +10,7 @@
     height: 100vh;
     background-color: $green-accent;
     padding-top: rem(104);
+    overflow: scroll;
 }
 
 .sp-nav.is-active {
