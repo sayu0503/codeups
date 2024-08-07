@@ -55,12 +55,12 @@ $(".js-hamburger").click(function () {
 
    //Campaignスライド
    var swiper = new Swiper(".js-campaign-swiper", {
-    slidesPerView: 1,
+    slidesPerView: 1.01,
     spaceBetween: 24,
-    // autoplay: {
-    //   delay: 0,
-    // },
-    speed: 3000,
+     autoplay: {
+       delay: 3000,
+     },
+     speed: 1500,
     loop: true,
     centeredSlides: true,
     width: 280,

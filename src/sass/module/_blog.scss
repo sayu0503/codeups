@@ -46,7 +46,7 @@
     margin-top: rem(27);
     display: grid;
     gap: rem(40);
-    grid-template-columns: repeat(auto-fit, minmax(rem(333), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(rem(333), 1fr));
     place-items: center;
     @include mq(md){
         margin-top: rem(82);
