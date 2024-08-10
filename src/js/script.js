@@ -84,45 +84,32 @@ $(".js-hamburger").click(function () {
   });
 });
 
-$(function () {
-  const pageTop = $(".js-page-top");
-  pageTop.hide();
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 20) {
-      pageTop.fadeIn();
-    } else {
-      pageTop.fadeOut();
-    }
-  });
-  pageTop.click(function () {
-    $("body, html").animate(
-      {
-        scrollTop: 0,
-      },
-      300
-    );
-    return false;
+//スクロールイベントでページトップボタンを表示/非表示
+$(function() {
+  $(window).on("scroll", function() {
+      if ($(this).scrollTop() > 20) {
+          $(".js-page-top").fadeIn(300);
+          } else {
+          $(".js-page-top").fadeOut(300);
+      }
+
+      const scrollHeight = $(document).height();/*ページ全体の高さ*/
+      const scrollPosition = $(window).height() + $(window).scrollTop();/*ページの一番上からスクロールされた距離*/
+      const footHeight = $('footer').outerHeight();/*フッターの高さ*/
+
+      if ( scrollHeight - scrollPosition  <= footHeight ) {
+          $(".js-page-top").css({
+              "position":"absolute",
+              "bottom": 16  + footHeight,
+          });
+      } else {
+          $(".js-page-top").css({
+              "position":"fixed",
+              "bottom": "16px",
+          });
+      }
   });
 
-  $(window).on("scroll", function () {
-    let scrollHeight = $(document).height();
-    let scrollPosition = $(window).height() + $(window).scrollTop();
-    let footHeight = $("footer").innerHeight();
-    var mediaQuery = window.matchMedia("(min-width: 768px)");
-
-    if (scrollHeight - scrollPosition <= footHeight) {
-      // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
-      pageTop.css({
-        position: "absolute",
-        bottom: footHeight + 16, // 余裕を持たせるために16ピクセル追加
-      });
-    } else {
-      pageTop.css({
-        position: "fixed",
-        bottom: "16px",
-      });
-    }
-  });
 });
 
   //背景色の後に画像やテキストが表示されるエフェクト
@@ -152,3 +139,4 @@ $(function () {
    });
   });
 
+  
